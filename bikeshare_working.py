@@ -9,18 +9,19 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 def get_filters():
-    """
-    Asks user to specify a city, month, and day to analyze.
+    ###
+    # asks user to specify a city, month, and day to analyze.
+    ###
+    # returns:
+    #    (str) city - name of the city to analyze
+    #    (str) month - name of the month to filter by, or "all" to apply no month filter
+    #    (str) day - name of the day of week to filter by, or "all" to apply no day filter
+    ###
 
-    Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    """
-    print('Hello! Let\'s explore some US bikeshare data!\n')
+    print('Welcome! Let\'s explore some US bikeshare data!\n')
 
-    ###Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city_string = "Would you like to see data for? (Enter a number)\n";
+    ### get user input for city (chicago, new york city, washington).
+    city_string = "Which city would you like to see data for? (Enter a number)\n";
     idx = 1
     for city in CITY_DATA.keys():
         city_string += str(idx) + '. ' + city + '\n';
@@ -72,15 +73,17 @@ def get_filters():
 
 
 def load_data(city, month, day):
-    """
-    Loads data for the specified city and filters by month and day if applicable.
-    Args:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
-    """
+    ###
+    # Loads data for the specified city and filters by month and day if applicable.
+    ###
+    # Args:
+    #   (str) city - name of the city to analyze
+    #   (str) month - name of the month to filter by, or "all" to apply no month filter
+    #   (str) day - name of the day of week to filter by, or "all" to apply no day filter
+    # Returns:
+    #   df - Pandas DataFrame containing city data filtered by month and day
+    ###
+
     ### load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
@@ -101,7 +104,7 @@ def load_data(city, month, day):
         df = df[df['month'] == month]
 
     ### filter by day of week if applicable
-    ###TODO Ensure code runs when no data
+    ### TODO Ensure code runs when no data
     if day != 'all':
 
         # filter by day of week to create the new dataframe
@@ -111,7 +114,7 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    ### displays statistics on the most frequent times of travel.
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -131,7 +134,7 @@ def time_stats(df):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    ### displays statistics on the most popular stations and trip.
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -151,7 +154,7 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    ### displays statistics on the total and average trip duration.
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -173,26 +176,26 @@ def trip_duration_stats(df):
 
 
 def user_stats(df, city):
-    """Displays statistics on bikeshare users."""
+    ### displays statistics on bikeshare users.
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    ### Display counts of user types
+    ### display counts of user types
     if 'User Type' in df.columns:
         user_types = df.groupby(['User Type'])['User Type'].count()
         print(user_types, "\n")
     else:
         print("No User Data")
 
-    ### Display counts of gender
+    ### display counts of gender
     if 'Gender' in df.columns:
         gender_count = df.groupby(['Gender'])['Gender'].count()
         print(gender_count)
     else:
         print("No Gender Data")
 
-    ### Display earliest, most recent, and most common year of birth.
+    ### display earliest, most recent, and most common year of birth.
     if 'Birth Year' in df.columns:
         young_yob = sorted(df.groupby(['Birth Year'])['Birth Year'], reverse=True)[0][0]
         young_yob = int(young_yob)
@@ -212,7 +215,7 @@ def user_stats(df, city):
     print('-'*40)
     x = 1
 
-    ### Call for raw data output
+    ### call for raw data output
     while True:
         raw = input('\nWould you like to see some raw data? Enter yes or no.\n')
         if raw.lower() == 'yes':
@@ -220,7 +223,7 @@ def user_stats(df, city):
             x = x+5
         elif raw.lower() == 'no':
             break
-        ###TODO handle running out of rows of raw data
+    ### TODO handle running out of rows of raw data
 
 def main():
     while True:
