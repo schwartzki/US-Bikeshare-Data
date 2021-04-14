@@ -22,7 +22,6 @@ bikeshare_working.py
   * https://stackoverflow.com/
   * https://www.pythonpool.com/
   * https://www.geeksforgeeks.org/precision-handling-python/
-  * https://www.geeksforgeeks.org
 
 
 * Markdown Help:
@@ -33,6 +32,6 @@ bikeshare_working.py
   * https://udacity.github.io/git-styleguide/
 
 ### Software Used
-* Atom
-* Anaconda - with NumPy and Pandas running
+* [Atom](https://atom.io/)
+* [Anaconda - with NumPy and Pandas running](https://www.anaconda.com/products/individual)
 * Terminal Application
