@@ -1,17 +1,38 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+### April 1st 2021
 
-### Date created
-Include the date you created this project and README file.
-
-### Project Title
-Replace the Project Title
+### US Bikeshare Python Data Analysis Project
 
 ### Description
-Describe what your project is about and what it does
+In this project, Python is used to explore data related to bike share systems in three major cities in the United States — Chicago, New York City, and Washington.
+
+* The source code has a interactive shell prompting the user for inputs.
+* According to the input the code will import the data and will provide information by computing descriptive statistics.
+* Project was coded with the future planning for additional cities/months/years being added later.
+* The raw data this project source code needs can be accessed here:
+  * [Bike Share Data](https://drive.google.com/file/d/1zURep42xVjiMi_kzprHzQot-ihDZxnri/view?usp=sharing)
 
 ### Files used
-Include the files used
+bikeshare_working.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+* Python Coding Help:
+  * https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html
+  * https://www.w3schools.com/python/
+  * https://stackoverflow.com/
+  * https://www.pythonpool.com/
+  * https://www.geeksforgeeks.org/precision-handling-python/
+  * https://www.geeksforgeeks.org
+
+
+* Markdown Help:
+  * https://guides.github.com/features/mastering-markdown/
+
+
+* Git Commit Style guide
+  * https://udacity.github.io/git-styleguide/
+
+### Software Used
+* Atom
+* Anaconda - with NumPy and Pandas running
+* Terminal Application
