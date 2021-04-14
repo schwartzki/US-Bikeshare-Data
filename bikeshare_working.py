@@ -18,10 +18,10 @@ def get_filters():
     #    (str) day - name of the day of week to filter by, or "all" to apply no day filter
     ###
 
-    print('Hello! Let\'s explore some US bikeshare data!\n')
+    print('Welcome! Let\'s explore some US bikeshare data!\n')
 
     ### get user input for city (chicago, new york city, washington).
-    city_string = "Would you like to see data for? (Enter a number)\n";
+    city_string = "Which city would you like to see data for? (Enter a number)\n";
     idx = 1
     for city in CITY_DATA.keys():
         city_string += str(idx) + '. ' + city + '\n';
